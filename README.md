@@ -1,6 +1,20 @@
-# Nutri-meal Application
+# Nutri-Meal Application
 
-A web application for managing nutritional goals and meal planning.
+A web application for managing nutritional goals, meal planning, and community engagement.
+
+## Table of Contents
+
+1. [Project Structure](#project-structure)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Setup Instructions](#setup-instructions)
+5. [Environment Variables](#environment-variables)
+6. [API Endpoints](#api-endpoints)
+7. [Frontend Routes](#frontend-routes)
+8. [Contributing](#contributing)
+9. [License](#license)
+
+---
 
 ## Project Structure
 
@@ -8,7 +22,7 @@ A web application for managing nutritional goals and meal planning.
 nutri-meal/
 ├── backend/
 │   ├── handlers/
-│   │   └── health_goal_handler.go
+│   │   └── ...
 │   ├── models/
 │   └── database/
 └── frontend/
@@ -16,11 +30,44 @@ nutri-meal/
 
 ## Features
 
-- Health goal management
-- User-specific nutritional tracking
-- CRUD operations for health goals
+- **Health Goals**: Set and track personal health objectives.
+- **Meal Planning**: Generate daily or weekly meal plans with recipes.
+- **Community**: Share posts, like, and interact with other users.
+- **Food Logs**: Track daily food intake and nutritional values.
+- **Progress Tracking**: Visualize health metrics over time.
 
-## Backend API Endpoints
+## Tech Stack
+
+- **Frontend**: React, TailwindCSS, Vite
+- **Backend**: Go (Fiber framework)
+- **Database**: MongoDB
+- **Authentication**: Google OAuth, Facebook Login
+- **Image Hosting**: Imgur API
+
+## Setup Instructions
+
+### Backend
+
+1. Clone the repository:
+   ```bash
+   cd nutri-meal
+   ```
+
+2. Install dependencies:
+   ```bash
+   # Backend (Go)
+   cd backend
+   go mod download
+   ```
+
+## Environment Variables
+
+```env
+MONGODB_URI=mongodb_connection_string
+PORT=8080
+```
+
+## API Endpoints
 
 ### Health Goals
 
@@ -29,47 +76,9 @@ nutri-meal/
 - `PUT /health-goals/:user_id` - Update a user's health goal
 - `GET /health-goals/user/:userId` - Get health goals by user ID
 
-## Setup
+## Frontend Routes
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/nutri-meal.git
-cd nutri-meal
-```
+----
 
-2. Install dependencies:
-```bash
-# Backend (Go)
-cd backend
-go mod download
-```
 
-3. Configure environment variables:
-```env
-MONGODB_URI=your_mongodb_connection_string
-PORT=8080
-```
 
-4. Run the application:
-```bash
-# From the backend directory
-go run main.go
-```
-
-## Tech Stack
-
-- Backend: Go with Fiber framework
-- Database: MongoDB
-- Frontend: (To be added)
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
